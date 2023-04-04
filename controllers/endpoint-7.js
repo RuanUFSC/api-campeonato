@@ -21,3 +21,15 @@ exports.atualizarnometime = (req, res, next) => {
         res.status(500).send({ erro: erro })
     })
 }
+
+exports.removerPartida = (req, res, next) => {
+    const idPartida = req.params.id
+    const query = 'DELETE FROM registro WHERE partida_id=$1'
+    
+    database.query(query, [idPartida]).then(() => {
+       res.status(200).send({ mensagem: 'Removido com sucesso!' })
+    }, (erro) => {
+        res.status(500).send({ erro: erro })
+    })
+    }
+
