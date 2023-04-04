@@ -1,4 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const controllers = require('../controllers/campeonato')
 
-module.exports = router;
+// Endpoints
+router.get('menor_placar', controllers.menor_placar)
+
+module.exports = router; 
