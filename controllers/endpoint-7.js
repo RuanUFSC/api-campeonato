@@ -1,4 +1,4 @@
-const database = require('./database')
+const database = require('../database')
 
 exports.consultarmenorplacar = (req, res, next) => {
     const placar = req.params.placar
