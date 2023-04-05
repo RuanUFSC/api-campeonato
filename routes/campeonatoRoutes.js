@@ -21,6 +21,7 @@ router.delete('/deletar-registro/:id', consultMatches.deleteRegistro);
 router.get('/menorPlacar', controller.consultarmenorplacar);
 router.put('/atualizarNomeTime', controller.atualizarnometime);
 router.delete('/deletar-partida/:id', controller.removerPartida);
+router.get('/consultaAsc', controller.consultaAsc);
 router.get('/Times', consultTeams.getTimes)
 router.post('/Times/insere', insertTeams.insertTeam)
 

@@ -33,3 +33,14 @@ exports.removerPartida = (req, res, next) => {
     })
     }
 
+    exports.consultaAsc = (req, res, next) => {
+        const query = 'SELECT * FROM pontuacao order by pontuacao asc;'
+        
+        database.query(query).then(() => {
+           res.status(200).send({ mensagem: 'Consultar por ordem crescente!' })
+        }, (erro) => {
+            res.status(500).send({ erro: erro })
+        })
+        }
+    
+
