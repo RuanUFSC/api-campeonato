@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controller/campeonatoController')
+const consultMatches = require('../controllers/campeonatoController')
 
-router.get('/consultar-partidas',controller.getConsultarPartidas);
-router.post('/inserir-registro', controller.postInserirRegistro);
-router.delete('/deletar-registro/:id', controller.deleteRegistro);
+router.get('/consultar-partidas',consultMatches.getConsultarPartidas);
+router.post('/inserir-registro', consultMatches.postInserirRegistro);
+router.delete('/deletar-registro/:id', consultMatches.deleteRegistro);
 
 module.exports = router;
