@@ -3,7 +3,7 @@ const pg = require('pg');
 const dotenv = require('dotenv');
 dotenv.config();
 // Definição da conexão 
-const database = new pg.Client(process.env.DATABASE);
+const database = new pg.Client('postgres://zitrwmln:P43I2tLjNRI0mb4K9lcab35YnU1OY0Iw@babar.db.elephantsql.com/zitrwmln');
 
 // Abertura da conexão com o banco de dados
 database.connect((erro) => {
