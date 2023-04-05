@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const consultMatches = require('../controllers/campeonatoController')
-const controller = require('./controllers/endpoint-7');
+const controller = require('../controllers/endpoint-7');
 const consultTeams = require("../controllers/consultTeams");
 const insertTeams = require("../controllers/insertTeamspoints");
 
